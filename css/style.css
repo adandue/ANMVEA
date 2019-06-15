@@ -88,6 +88,12 @@ h1, h2, h3, h4
 .texto-hero
 {
     grid-area: texto-hero;
+    justify-items: center;
+    align-items: center;
+}
+.texto-hero strong
+{
+    color: #ffcd48;
 }
 .beeImage1
 {
