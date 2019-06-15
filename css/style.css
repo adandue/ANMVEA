@@ -231,14 +231,15 @@ h1, h2, h3, h4
     display: inline-block;
 }
 
-@media screen and (max-width: 767px)
+@media screen and (max-width: 768px)
 {
     .container
     {
-        max-width: 100vh;
+        max-width: 100vw;
     }
     .hero
     {
+        max-width: 100vw;
         height: 600px;
         grid-template-columns: 1fr;
         grid-template-areas: "texto-hero"
@@ -250,6 +251,7 @@ h1, h2, h3, h4
     }
     .eventos
     {
+        max-width: 100vw;
         height: 600px;
         grid-template-columns: 1fr;
         grid-template-areas: "eventos-text"
@@ -260,6 +262,7 @@ h1, h2, h3, h4
     }
     .noticias
     {
+        max-width: 100vw;
         height: 800px;
         grid-template-columns: 1fr;
         grid-template-areas: "noticias-text"
@@ -271,5 +274,8 @@ h1, h2, h3, h4
     {
         max-width: 100vw;   
     }
-
+    .form_mail
+    {
+        max-width: 100vw;
+    }
 }
