@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Comfortaa|Montserrat|Quicksand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/modal.css"/>
     <title>ANMVEA</title>
 </head>
 
@@ -64,9 +65,42 @@
             <h1 class="noticias-text">
                 Noticias
             </h1>
-            <img class="noticia-image noticia1" src="img/amarillo.png" alt="noticia1" width="150" height="200">
-            <img class="noticia-image noticia2" src="img/amarillo.png" alt="" width="150" height="200">
-            <img class="noticia-image noticia3" src="img/amarillo.png" alt="" width="150" height="200">
+            <div class="overlay" id="overlay">
+
+            </div>
+            <div class="modal" id="modal1">
+                    <h1>Título de pelicula</h1>
+                    <div class="modal-content">
+                      <img src="" alt="" width="170" height="256">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione impedit maiores enim alias ex accusantium quasi cum autem, nam, voluptas tenetur laudantium quod! Odit voluptate illo, voluptas vel quia, quae.</p>
+                    </div>
+                    <div class="modal-buttons">
+                      <button class="modal-btn primary" id="hide-modal">Cerrar Modal</button>
+                    </div>
+                  </div>
+            <div class="modal" id="modal2">
+                    <h1>Título de pelicula</h1>
+                    <div class="modal-content">
+                      <img src="" alt="" width="170" height="256">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione impedit maiores enim alias ex accusantium quasi cum autem, nam, voluptas tenetur laudantium quod! Odit voluptate illo, voluptas vel quia, quae.</p>
+                    </div>
+                    <div class="modal-buttons">
+                      <button class="modal-btn primary" id="hide-modal">Cerrar Modal</button>
+                    </div>
+                  </div>
+            <div class="modal" id="modal3">
+                    <h1>Título de pelicula</h1>
+                    <div class="modal-content">
+                      <img src="" alt="" width="170" height="256">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione impedit maiores enim alias ex accusantium quasi cum autem, nam, voluptas tenetur laudantium quod! Odit voluptate illo, voluptas vel quia, quae.</p>
+                    </div>
+                    <div class="modal-buttons">
+                      <button class="modal-btn primary" id="hide-modal">Cerrar Modal</button>
+                    </div>
+                  </div>
+            <img class="noticia-image noticia1" id="noticia1" src="img/amarillo.png" alt="noticia1" width="150" height="200">
+            <img class="noticia-image noticia2" id="noticia2" src="img/amarillo.png" alt="" width="150" height="200">
+            <img class="noticia-image noticia3" id="noticia3" src="img/amarillo.png" alt="" width="150" height="200">
         </section>
     </div>
     <div class="container">
@@ -97,7 +131,7 @@
     </div>
 
     <div class="container">
-        <footer>
+        <footer>     
             <div class="footer">
                 <p>
                     by AkambaTech
@@ -107,5 +141,52 @@
         </footer>
     </div>
 </body>
+<script>
+    const $modal1 = document.getElementById('modal1');
+    const $modal2 = document.getElementById('modal1');
+    const $modal3 = document.getElementById('modal1');
+    const $overlay = document.getElementById('overlay');
+    const $noticia1 = document.getElementById('noticia1');
+    const $noticia2 = document.getElementById('noticia2');
+    const $noticia3 = document.getElementById('noticia3');
+    const $hidemodal = document.getElementById('hide-modal');
 
+    $noticia1.addEventListener('click', (event) =>
+        {
+            // console.log(event);
+            $modal1.style.animation = 'modalIn .8s forwards';
+            $overlay.classList.add('active');
+        });
+    $hidemodal.addEventListener('click', (event) => 
+        {
+            $modal1.style.animation = 'modalOut .8s forwards';
+            $overlay.classList.remove('active');
+        });
+    
+    $noticia2.addEventListener('click', (event) =>
+        {
+            // console.log(event);
+            $modal2.style.animation = 'modalIn .8s forwards';
+            $overlay.classList.add('active');
+        });
+    $hidemodal.addEventListener('click', (event) => 
+        {
+            $modal2.style.animation = 'modalOut .8s forwards';
+            $overlay.classList.remove('active');
+        });
+    
+    $noticia3.addEventListener('click', (event) =>
+        {
+            // console.log(event);
+            $modal3.style.animation = 'modalIn .8s forwards';
+            $overlay.classList.add('active');
+        });
+    $hidemodal.addEventListener('click', (event) => 
+        {
+            $modal3.style.animation = 'modalOut .8s forwards';
+            $overlay.classList.remove('active');
+        });
+    
+
+</script>
 </html>

@@ -154,12 +154,12 @@ h4 {
     grid-area: noticia1;
 }
 
-.noticia1:hover,
+/* .noticia1:hover,
 .noticia2:hover,
 .noticia3:hover {
     transition: 0.5s;
     transform: scale(3, 3)
-}
+} */
 
 .noticia2 {
     grid-area: noticia2;
