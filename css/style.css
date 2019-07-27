@@ -171,18 +171,44 @@ h4 {
 
 .banner_final {
     display: grid;
-    justify-content: center;
+    justify-items: center;
+    background: #422108;
     align-items: center;
+    max-height: 574px;
     grid-template-columns: 1fr;
-    grid-template-areas: "bee2";
+    /* grid-template-areas: "bee2"; */
+    grid-template-areas: "video";
 }
 
 .bee2 {
     height: auto;
     max-width: 1024px;
+    justify-content: center;
     grid-area: bee2;
 }
-
+.video-container
+{
+    height: 0;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 56.25%;
+    /* background: blue; */
+    position: relative;
+}
+.video-container iframe,
+.video-container object,
+.video-container embed,
+.video-container video
+{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 .form_mail {
     grid-area: form;
     height: 400px;

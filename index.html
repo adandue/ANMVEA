@@ -69,7 +69,7 @@
 
             </div>
             <div class="modal" id="modal1">
-                    <h1>Título de pelicula</h1>
+                    <h1>noticia 1</h1>
                     <div class="modal-content">
                       <img src="" alt="" width="170" height="256">
                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione impedit maiores enim alias ex accusantium quasi cum autem, nam, voluptas tenetur laudantium quod! Odit voluptate illo, voluptas vel quia, quae.</p>
@@ -79,23 +79,23 @@
                     </div>
                   </div>
             <div class="modal" id="modal2">
-                    <h1>Título de pelicula</h1>
+                    <h1>Noticia 2</h1>
                     <div class="modal-content">
                       <img src="" alt="" width="170" height="256">
                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione impedit maiores enim alias ex accusantium quasi cum autem, nam, voluptas tenetur laudantium quod! Odit voluptate illo, voluptas vel quia, quae.</p>
                     </div>
                     <div class="modal-buttons">
-                      <button class="modal-btn primary" id="hide-modal">Cerrar Modal</button>
+                      <button class="modal-btn primary" id="hide-modal2">Cerrar Modal</button>
                     </div>
                   </div>
             <div class="modal" id="modal3">
-                    <h1>Título de pelicula</h1>
+                    <h1>Noticia 3</h1>
                     <div class="modal-content">
                       <img src="" alt="" width="170" height="256">
                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione impedit maiores enim alias ex accusantium quasi cum autem, nam, voluptas tenetur laudantium quod! Odit voluptate illo, voluptas vel quia, quae.</p>
                     </div>
                     <div class="modal-buttons">
-                      <button class="modal-btn primary" id="hide-modal">Cerrar Modal</button>
+                      <button class="modal-btn primary" id="hide-modal3">Cerrar Modal</button>
                     </div>
                   </div>
             <img class="noticia-image noticia1" id="noticia1" src="img/amarillo.png" alt="noticia1" width="150" height="200">
@@ -105,7 +105,10 @@
     </div>
     <div class="container">
         <section class="banner_final">
-            <img class="bee2" src="img/bee2.jpg" alt="">
+                <div class="video-container">
+                    <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FDesarrolloRuralChih%2Fvideos%2F366668917312779%2F&show_text=0&width=560" width="560" height="315" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+                </div>
+            <!-- <img class="bee2" src="img/bee2.jpg" alt=""> -->
         </section>
     </div>
 
@@ -143,13 +146,16 @@
 </body>
 <script>
     const $modal1 = document.getElementById('modal1');
-    const $modal2 = document.getElementById('modal1');
-    const $modal3 = document.getElementById('modal1');
+    const $modal2 = document.getElementById('modal2');
+    const $modal3 = document.getElementById('modal3');
     const $overlay = document.getElementById('overlay');
     const $noticia1 = document.getElementById('noticia1');
     const $noticia2 = document.getElementById('noticia2');
     const $noticia3 = document.getElementById('noticia3');
     const $hidemodal = document.getElementById('hide-modal');
+    const $hidemodal2 = document.getElementById('hide-modal2');
+    const $hidemodal3 = document.getElementById('hide-modal3');
+    
 
     $noticia1.addEventListener('click', (event) =>
         {
@@ -169,7 +175,7 @@
             $modal2.style.animation = 'modalIn .8s forwards';
             $overlay.classList.add('active');
         });
-    $hidemodal.addEventListener('click', (event) => 
+    $hidemodal2.addEventListener('click', (event) => 
         {
             $modal2.style.animation = 'modalOut .8s forwards';
             $overlay.classList.remove('active');
@@ -181,12 +187,12 @@
             $modal3.style.animation = 'modalIn .8s forwards';
             $overlay.classList.add('active');
         });
-    $hidemodal.addEventListener('click', (event) => 
+    $hidemodal3.addEventListener('click', (event) => 
         {
             $modal3.style.animation = 'modalOut .8s forwards';
             $overlay.classList.remove('active');
         });
-    
+
 
 </script>
 </html>

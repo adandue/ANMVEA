@@ -52,7 +52,7 @@
   text-align: center;
   z-index: 2;
   transform: translateY(-3000px);
-  position: absolute;
+  position: fixed;
   left: 0;
   right: 0;
   top: 0;
@@ -110,5 +110,12 @@
   }
   100% {
     transform: translateY(-3000px);
+  }
+}
+@media screen and (max-width: 768px)
+{
+  .modal
+  {
+    width: 280px;
   }
 }
